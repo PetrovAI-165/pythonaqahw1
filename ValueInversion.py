@@ -1,5 +1,4 @@
 def getValue():
-
     result = input()
 
     try:
@@ -11,14 +10,10 @@ def getValue():
     return result
 
 
-def nearestValuesCalc(value):
-
-    prevValue = value - 1
-    nextValue = value + 1
-    return [prevValue, nextValue]
+def valueInversion(value):
+    return value * -1
 
 
 print("Enter any integer value: ")
 value = getValue()
-result = nearestValuesCalc(value)
-print(f"Previous value: %d. Next value: %d" % (result[0], result[1]))
+print(f"Original value: %d. Inverted value: %d" % (value, valueInversion(value)))

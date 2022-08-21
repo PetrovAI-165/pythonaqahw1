@@ -17,7 +17,7 @@ def getCount():
 
 def applesDivision(students, apples):
 
-    applesForEachStudent = int(apples / students)
+    applesForEachStudent = apples // students
     applesInBasket = apples % students
     return [applesForEachStudent, applesInBasket]
 
