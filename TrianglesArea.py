@@ -1,14 +1,23 @@
 def getCathetus():
-    result = float(input())
-    if type(result) != type(float) and result <= 0:
+
+    result = input()
+
+    try:
+        result = float(result)
+    except:
+        print("Not a number. Try again!")
+        result = getCathetus()
+
+    if result <= 0:
         print("Invalid value. Try again!")
-        getCathetus()
-    else:
-        return result
+        result = getCathetus()
+
+    return result
 
 
 def triangleArea(c1, c2):
-    result = 1 / 2 * c1 * c2
+
+    result = 0.5 * c1 * c2
     return result
 
 

@@ -1,13 +1,22 @@
 def getCount():
-    result = int(input())
-    if type(result) != type(int) and result <= 0:
+
+    result = input()
+
+    try:
+        result = int(result)
+    except:
+        print("Not a integer. Try again!")
+        result = getCount()
+
+    if result <= 0:
         print("Invalid value. Try again!")
-        getCount()
-    else:
-        return result
+        result = getCount()
+
+    return result
 
 
 def applesDivision(students, apples):
+
     applesForEachStudent = int(apples / students)
     applesInBasket = apples % students
     return [applesForEachStudent, applesInBasket]
